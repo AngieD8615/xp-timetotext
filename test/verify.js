@@ -26,6 +26,10 @@ if (failedTests.length > 0) {
   console.log('For example, "' + randomFailure.time + '"',
     'expected("' + randomFailure.expected + '") ',
     'actual("' + randomFailure.actual + '")')
+  console.log(`The following times have errors:`)
+  for (var i = 0; i < failedTests.length; i++) {
+    console.log(failedTests[i].time, " got ", failedTests[i].actual)
+  }
 } else {
   console.log('Success! No failures!')
 }
